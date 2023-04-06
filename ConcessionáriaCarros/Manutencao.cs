@@ -8,9 +8,11 @@ namespace ConcessionáriaCarros
 {
     internal class Manutencao
     {
-        private string _oficina;
-        private string _data;
-        private List<string> _items;
+        public string? Oficina { get; set; }
+        public string? Data { get; set; }
+        public List<string>? Items { get; set; }    
+
+        public Manutencao() { }
 
         public Manutencao(string oficina, string data, List<string> items)
         {
@@ -18,9 +20,5 @@ namespace ConcessionáriaCarros
             Data = data;
             Items = items;
         }
-
-        public string Oficina { get => _oficina; set => _oficina = value; }
-        public string Data { get => _data; set => _data = value; }
-        public List<string> Items { get => _items; set => _items = value; }
     }
 }
